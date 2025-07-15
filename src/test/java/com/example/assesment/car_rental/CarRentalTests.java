@@ -89,4 +89,12 @@ public class CarRentalTests {
         assertTrue(reservedCount <= 5, "Reserved count should not exceed available cars");
     }
 
+    @Test
+    public void testAddCar(){
+        Car someCar = new Sedan("X", "Y", 10);
+        inventory.addCar(someCar, 10);
+
+        assertEquals(10, inventory.getQuantity(someCar));
+    }
+
 }
